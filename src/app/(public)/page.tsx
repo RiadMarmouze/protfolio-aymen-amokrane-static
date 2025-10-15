@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 // import EdgeLabel from "@/components/EdgeLabel";
 import HeroSectionServer from "@/components/public/home/_sections/HeroSection/HeroSection.server";
 import FeaturedProjectsServer from "@/components/public/home/_sections/FeaturedProjectsSection/FeaturedProjects.server";
