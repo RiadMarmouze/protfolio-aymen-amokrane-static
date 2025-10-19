@@ -2,13 +2,8 @@ import SectionTitle from "@/components/SectionTitle";
 import Placeholder from "@/components/public/common/Placeholder";
 import CountUp from "@/components/public/about/CountUp";
 
-import {
-  experiences,
-  education,
-  skills,
-  tools,
-  stats,
-} from "@/data/about";
+import { experiences, education, skills, tools, stats } from "@/data/about";
+import { ACHIEVEMENTS } from "@/lib/data/achievements";
 
 /* ===== Local style tokens (kept in this file) ===== */
 const container = "max-w-5xl mx-auto px-4";
@@ -21,7 +16,7 @@ const bigNumber =
 
 export default function AboutPage() {
   return (
-    <main>
+    <main className="min-h-screen pt-[var(--nav-h)]">
       {/* Hero */}
       <section className="relative h-[42vh] min-h-[300px] flex items-center justify-center">
         <Placeholder className="absolute inset-0" />
@@ -44,9 +39,9 @@ export default function AboutPage() {
             strategy-led brand systems
           </span>
           . I help teams ship identities that scale — from{" "}
-          <span className="italic font-semibold">positioning</span> to{" "}
-          <span className="italic font-semibold">guidelines</span> and{" "}
-          <span className="italic font-semibold">design ops</span>.
+          <span className="italic font-bold">positioning</span> to{" "}
+          <span className="italic font-bold">guidelines</span> and{" "}
+          <span className="italic font-bold">design ops</span>.
         </p>
       </section>
 
@@ -100,9 +95,24 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className={`${container} pb-10`}>
+        <SectionTitle>Achievements</SectionTitle>
+        <ul className="space-y-8  md:space-y-10">
+          {ACHIEVEMENTS.map(({ title, subtitle }, i) => (
+            <li key={`${title}-${i}`}>
+              <h3 className="text-xl md:text-2xl font-semibold">{title}</h3>
+              {subtitle && (
+                <p className="text-neutral-500 md:text-neutral-600 text-sm md:text-base max-w-2xl">
+                  {subtitle}
+                </p>
+              )}
+            </li>
+          ))}
+        </ul>
+      </section>
       {/* Numbers */}
       <section>
-        <div className={`${container} py-16`}>
+        <div className={`${container} `}>
           <SectionTitle>By the numbers</SectionTitle>
           <div className="grid gap-x-10 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
             {stats.map((s, i) => (

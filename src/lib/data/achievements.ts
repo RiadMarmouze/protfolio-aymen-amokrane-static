@@ -23,13 +23,3 @@ export const ACHIEVEMENTS: Achievement[] = [
     subtitle: "Featured work selection — personal + client projects.",
   },
 ];
-
-export const ACCENTS = [
-  "#111111",
-  "#1f2937",
-  "#0f766e",
-  "#7c3aed",
-  "#b91c1c",
-  "#065f46",
-  "#4338ca",
-];

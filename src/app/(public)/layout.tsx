@@ -13,10 +13,7 @@ export default function PublicLayout({ children }: { children: ReactNode }) {
   return (
     <>
       <NavBar />
-      {/* Keep page content below the nav; avoid inline styles */}
-      <main className="min-h-screen">
-        {children}
-      </main>
+      {children}
       <Footer />
     </>
   );

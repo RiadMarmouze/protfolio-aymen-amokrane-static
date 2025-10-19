@@ -39,7 +39,7 @@ export default async function WorkPage() {
   const latest = allProjects[0];
 
   return (
-    <main>
+    <main className="min-h-screen pt-[var(--nav-h)]">
       <ScrollProgress />
       <section>
         <Container className="pt-8 pb-10">

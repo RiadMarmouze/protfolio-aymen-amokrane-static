@@ -6,7 +6,7 @@ import SelectedClientsServer from "@/components/public/home/_sections/SelectedCl
 
 import PageIntroTransition from "@/components/public/home/PageIntroTransition";
 import { ReactNode, Suspense } from "react";
-import AchievementsServer from "@/components/public/home/_sections/AchievementsSection/Achievements.server";
+import NumbersSectionServer from "@/components/public/home/_sections/NumbersSection/Numbers.server";
 const INTRO_CONFIG = {
   bgColor: "#000",
   rectColor: "#fff",
@@ -64,8 +64,10 @@ export default function HomePage() {
         Skip to content
       </a> */}
 
-      <main id="content" className="relative  w-screen flex flex-col gap-10 md:gap-16">
-
+      <main
+        id="content"
+        className="relative  w-screen flex flex-col gap-10 md:gap-16 min-h-screen"
+      >
         {/* Decorative edge hint; hidden from AT */}
         {/* <EdgeLabel aria-hidden>Scroll v</EdgeLabel> */}
 
@@ -84,8 +86,9 @@ export default function HomePage() {
           <SelectedClientsServer />
         </Suspense>
 
-        <Suspense fallback={<SectionSkeleton label="Achievements" />}>
-          <AchievementsServer />
+        {/* NUMBERS (full-bleed marquee) */}
+        <Suspense fallback={<SectionSkeleton label="Selected clients" />}>
+          <NumbersSectionServer />
         </Suspense>
       </main>
     </PageIntroTransition>

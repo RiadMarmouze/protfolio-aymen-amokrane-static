@@ -490,7 +490,7 @@ export default function ContactPage() {
   const [open, setOpen] = useState<PriorityKey | null>(null);
 
   return (
-    <main className="py-12">
+    <main className="min-h-screen pt-[var(--nav-h)]">
       <CenteredSection>
         <SectionTitle>Priority Projects</SectionTitle>
         

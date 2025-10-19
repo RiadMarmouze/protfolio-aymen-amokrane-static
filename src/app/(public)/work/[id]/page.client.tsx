@@ -24,8 +24,9 @@ export default function ProjectClientPage({ project }: { project: Project }) {
   const [noteDrawerOpen, setNoteDrawerOpen] = useState(false);
   useEscapeClose(noteDrawerOpen, () => setNoteDrawerOpen(false));
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen pt-[var(--nav-h)]">
       <ProjectHeader
+        project={project}
         aboutOpen={noteDrawerOpen}
         onToggleAbout={() => setNoteDrawerOpen((v) => !v)}
       />

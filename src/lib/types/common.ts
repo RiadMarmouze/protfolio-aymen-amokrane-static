@@ -7,3 +7,16 @@ export type MediaItem = {
   aspect?: "square" | "wide";             // override/infer fallback
   span2?: boolean;                        // square that should take the whole row
 };
+
+
+export type SocialLink = {
+  label: "Instagram" | "Behance" | "Linkedin";
+  href: string;
+};
+
+
+
+export type IconProps = React.SVGProps<SVGSVGElement> & {
+  size?: number | string;
+  strokeWidth?: number;
+};

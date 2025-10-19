@@ -1,4 +1,3 @@
-// components/ui/Container.tsx
 import { ReactNode } from "react";
 
 type Props = {
@@ -12,7 +11,7 @@ type Props = {
  */
 export default function Container({ children, className = "" }: Props) {
   return (
-    <div className={`mx-auto w-full max-w-[1600px] px-4 md:px-6 ${className}`}>
+    <div className={`mx-auto w-full max-w-[1400px] px-4 md:px-6 ${className}`}>
       {children}
     </div>
   );

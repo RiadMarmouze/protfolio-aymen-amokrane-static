@@ -4,26 +4,6 @@ import { ContentBlockRenderer } from "../_components/ContentBlockRendrer";
 export function ContentBlocks({ project }: { project: Project }) {
   return (
     <article className="mx-auto max-w-4xl">
-      <header className="mb-8 space-y-3 text-center sm:text-left">
-        <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-          {project.generalInfos.title}
-        </h1>
-        <p className="text-base text-muted-foreground sm:text-lg max-w-2xl mx-auto sm:mx-0">
-          {project.generalInfos.summary}
-        </p>
-
-        <div className="mt-4 flex flex-wrap justify-center sm:justify-start gap-2">
-          {project.generalInfos.tags.map((t) => (
-            <span
-              key={t}
-              className="px-3 py-1 rounded-full border-2 text-xs uppercase tracking-[0.15em] border-black "
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-      </header>
-
       {/* Content blocks */}
       <section className="space-y-4">
         {project.contentBlocksInfos

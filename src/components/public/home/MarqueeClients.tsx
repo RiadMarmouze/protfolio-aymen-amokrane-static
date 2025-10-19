@@ -1,10 +1,10 @@
-import { logos } from "@/lib/data/home";
+import { SELECTED_CLIENTS_DATA } from "@/lib/data/home";
 
 export default function MarqueeClients() {
   return (
     <div className="overflow-hidden border-y-2 border-black group">
       <div className="whitespace-nowrap animate-[marquee_32s_linear_infinite] group-hover:[animation-play-state:paused] py-4">
-        {logos.map(( item ) => (
+        {SELECTED_CLIENTS_DATA.map(( item ) => (
           <span
             key={item.name}
             className="inline-flex items-center mx-8 text-neutral-500"
