@@ -96,10 +96,10 @@ export default function NavBar() {
         className={`${innerBase} ${innerStyle} relative flex items-center justify-between`}
       >
         {/* Left: Logo */}
-        <span className="mr-3 inline-flex items-center justify-center h-14 w-14">
+        <span className="inline-flex items-center justify-center h-14 w-20">
           <Image
-            src={"/images/common/logo.jpg"}
-            alt={"logo"}
+            src="/images/common/logo.jpg"
+            alt="logo"
             width={884}
             height={343}
             priority={false}

@@ -20,8 +20,7 @@ export function NotesDrawer({
       animate={{ x: 0, opacity: 1 }}
       exit={{ x: "100%", opacity: 0 }}
       transition={{ type: "tween", duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
-      className="fixed right-0 top-[var(--nav-h,64px)] bottom-0 z-50
-             w-full max-w-[640px] bg-white border-l-2 border-black overflow-y-auto"
+      className="absolute right-0 top-0 h-full w-full sm:w-1/2 bg-white border-l-2 border-black overflow-y-auto z-10"
       aria-label="Project notes and details"
     >
       <div className="px-5 py-4 sticky top-0 bg-white border-b-2 border-black flex items-center justify-between z-10">
@@ -36,7 +35,6 @@ export function NotesDrawer({
       </div>
 
       <div className="px-5 py-5 text-sm grid gap-5">
-        {/* Content */}
         <div className="px-5 py-5 text-sm">
           {project.notesBlocksInfos?.length ? (
             <NotesBlockRenderer

@@ -1,43 +1,51 @@
 import { StickyNote } from "lucide-react";
 import { Btn } from "@/components/public/common/ui";
 import type { Project } from "../lib/schema";
+import { cn } from "@/lib/utils/cn";
 
 export function ProjectHeader({
   project,
   aboutOpen,
   onToggleAbout,
+  className,
 }: {
   project: Project;
   aboutOpen: boolean;
   onToggleAbout: () => void;
+  className?: string;
 }) {
   const { title, summary, tags } = project.generalInfos;
 
   return (
     <header
-      className="relative space-y-3 text-center sm:text-left"
+      className={cn(
+        "relative space-y-3 text-center sm:text-left",
+        className
+      )}
       role="banner"
     >
       {/* Title + tags block (left), no back button */}
       <h1 className="text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
         {title}
       </h1>
+
       <p className="text-base text-muted-foreground sm:text-lg max-w-2xl mx-auto sm:mx-0">
         {summary}
       </p>
 
-      <div className=" flex items-center justify-between">
+      <div className="flex items-center justify-between">
         <div className="flex flex-wrap justify-center sm:justify-start gap-2">
           {tags.map((t) => (
             <span
               key={t}
-              className="px-3 py-1 rounded-full border-2 text-xs uppercase tracking-[0.15em] border-black "
+              className="px-3 py-1 rounded-full border-2 text-xs uppercase tracking-[0.15em] border-black"
             >
               {t}
             </span>
           ))}
         </div>
-        {/* Floating Notes Button (stays on screen even when header is offscreen) */}
+
+        {/* Floating Notes Button */}
         <Btn
           onClick={onToggleAbout}
           className="group relative flex px-3 py-1.5 text-sm"

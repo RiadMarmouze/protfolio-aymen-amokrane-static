@@ -82,7 +82,7 @@ export function ContentBlockRenderer({ block }: { block: Block }) {
 
       return (
         <figure
-          className="relative mt-4 w-full overflow-hidden rounded-2xl bg-neutral-100"
+          className="relative mt-4 w-full overflow-hidden  bg-neutral-100"
           style={
             ratio ? ({ aspectRatio: ratio } as React.CSSProperties) : undefined
           }

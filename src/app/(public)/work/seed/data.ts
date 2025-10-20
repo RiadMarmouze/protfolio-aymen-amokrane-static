@@ -34,7 +34,8 @@ export const projects = [
           profileUrl: "https://saraboufligha.art",
         },
       ],
-      heroUrl: "https://picsum.photos/seed/app-ui/1200/800",
+      heroUrl:
+        "https://firebasestorage.googleapis.com/v0/b/portfolio-aymen-amokrane.firebasestorage.app/o/projects%2FCMTaAao0LnZUgWOLtn0E%2Fhero.jpg?alt=media&token=d5fb4273-d083-4719-8e20-61ebd8eb4d14",
     },
 
     contentBlocksInfos: [
@@ -51,352 +52,347 @@ export const projects = [
         order: 2,
       },
       {
-        type: "paragraph",
-        content:
-          "WeeWee is a next-generation delivery service redefining logistics in Algeria through technology, efficiency, and a customer-first approach. More than just a courier company, WeeWee leverages smart logistics solutions to ensure faster, more reliable deliveries while fostering a sustainable future.",
+        type: "image",
+        content: [
+          {
+            url: "https://firebasestorage.googleapis.com/v0/b/portfolio-aymen-amokrane.firebasestorage.app/o/projects%2FCMTaAao0LnZUgWOLtn0E%2FArtboard%201.jpg?alt=media&token=c7a2569e-c263-42da-b879-0926da1c1d1f",
+            alt: "Delivery app UI",
+            width: 1400,
+            height: 700,
+            displayRatio: "2:1",
+          },
+        ],
         order: 3,
       },
-
-      {
-        type: "heading",
-        content: "Project Scope",
-        order: 4,
-        meta: { section: "project_scope" },
-      },
-      {
-        type: "list",
-        content: "Rebranding; Brand Strategy; Visual Identity & Logo Design",
-        order: 5,
-      },
-      {
-        type: "heading",
-        content: "Challenge",
-        order: 6,
-        meta: { section: "challenge" },
-      },
-      {
-        type: "paragraph",
-        content:
-          "WeeWee Delivery began as a basic logistics service focused on fast and affordable deliveries. However, as the company grew, it struggled to stand out in a highly competitive market. The original brand lacked innovation, emotional connection, and distinction, making it difficult to build trust and recognition. Its road-inspired logo symbolized movement but didn’t reflect technology, adaptability, or sustainability—the key pillars of WeeWee’s new vision.",
-        order: 7,
-      },
-      {
-        type: "heading",
-        content: "Outcome",
-        order: 8,
-        meta: { section: "outcome" },
-      },
-      {
-        type: "paragraph",
-        content:
-          "The rebrand transformed WeeWee into a tech-driven, customer-first logistics brand. The new mascot, the Maknin (European Finch), replaced the road-based logo—symbolizing speed, intelligence, and adaptability, while embedding sustainability into the brand’s long-term vision. The new identity shifts WeeWee from basic delivery to smart logistics, establishing a recognizable and emotionally engaging presence with both B2B and B2C audiences.",
-        order: 9,
-      },
-      {
-        type: "heading",
-        content: "Visual Exploration",
-        order: 10,
-        meta: { section: "visual_identity" },
-      },
-      {
-        type: "paragraph",
-        content:
-          "The move to a mascot-based identity emerged from the need to express innovation, intelligence, and technology. The Maknin (European Goldfinch), chosen for its symbolic relevance in Algeria, embodies speed, adaptability, and precision—essential for modern logistics. It connects the brand to local heritage while reinforcing its sustainable vision. This approach gives WeeWee warmth, personality, and trustworthiness, distinguishing it from typical logistics brands that rely on abstract symbols.",
-        order: 11,
-      },
-      {
-        type: "heading",
-        content: "Brand Strategy",
-        order: 12,
-        meta: { section: "strategy" },
-      },
-      {
-        type: "paragraph",
-        content:
-          "The rebranding focused on evolving WeeWee into a tech-driven logistics brand with an emotionally resonant identity. Through visual design, mascot creation, and redefined messaging, the new brand establishes a strong foundation for future innovation.",
-        order: 13,
-      },
-      {
-        type: "subheading",
-        content: "Benefits & Value",
-        order: 14,
-      },
-      {
-        type: "paragraph",
-        content:
-          "WeeWee delivers fast, reliable, and customer-centric logistics services that emphasize user-friendly experiences, sustainability, and trust. For e-commerce businesses, it provides international-standard logistics solutions, promoting growth and efficiency.",
-        order: 15,
-      },
-      {
-        type: "subheading",
-        content: "Brand Goals",
-        order: 16,
-      },
-      {
-        type: "paragraph",
-        content:
-          "WeeWee aims to lead Algeria’s tech-driven logistics industry, setting new standards in e-logistics and e-commerce. Its mission includes advancing customer rights, service excellence, and innovation to become the most trusted delivery provider in Algeria.",
-        order: 17,
-      },
-      {
-        type: "subheading",
-        content: "Target Audience",
-        order: 18,
-      },
-      {
-        type: "list",
-        content:
-          "Medical analyses centers; E-commerce businesses; Administrative facilities; General consumers (ages 18–65, primarily 18–35)",
-        order: 19,
-      },
-      {
-        type: "heading",
-        content: "Brand Mission",
-        order: 20,
-      },
-      {
-        type: "quote",
-        content: "Delivering Smarter, Moving Faster, Caring More.",
-        order: 21,
-      },
-      {
-        type: "paragraph",
-        content:
-          "WeeWee’s mission is to create an honest, trustworthy marketplace through exceptional delivery services that prioritize customer needs. By promoting transparency and reliability, the brand seeks to build long-term relationships grounded in mutual success.",
-        order: 22,
-      },
-      {
-        type: "heading",
-        content: "Brand Vision",
-        order: 23,
-      },
-      {
-        type: "quote",
-        content: "Delivery Done Differently.",
-        order: 24,
-      },
-      {
-        type: "paragraph",
-        content:
-          "WeeWee envisions transforming the logistics sector through innovation and sustainability. By leveraging technology for efficiency and eco-conscious practices, it aims to redefine reliability and excellence in delivery services.",
-        order: 25,
-      },
-      {
-        type: "heading",
-        content: "Brand Personality",
-        order: 26,
-      },
-      {
-        type: "paragraph",
-        content:
-          "WeeWee’s personality blends innovation, trust, and approachability. Every brand interaction—whether with customers or partners—reflects reliability, engagement, and a forward-thinking mindset.",
-        order: 27,
-      },
-      {
-        type: "heading",
-        content: "Brand Voice",
-        order: 28,
-      },
-      {
-        type: "paragraph",
-        content:
-          "The brand voice is friendly, approachable, and intelligently innovative. It conveys care and expertise, combining warmth with a commitment to technology and sustainability. This helps customers navigate logistics with confidence and ease.",
-        order: 29,
-      },
-      {
-        type: "heading",
-        content: "Brand Tone",
-        order: 30,
-      },
-      {
-        type: "paragraph",
-        content:
-          "WeeWee’s tone is engaging, informative, and trustworthy. It adapts to diverse audiences—consumers, business partners, or specialized clients—while maintaining clarity and customer focus.",
-        order: 31,
-      },
-      {
-        type: "heading",
-        content: "Brand Attributes",
-        order: 32,
-      },
-      {
-        type: "paragraph",
-        content:
-          "WeeWee’s attributes center on innovation, trust, and customer satisfaction. Its human-centered design and forward-thinking solutions ensure an efficient, seamless delivery experience.",
-        order: 33,
-      },
-      {
-        type: "heading",
-        content: "Brand Archetype",
-        order: 34,
-      },
-      {
-        type: "paragraph",
-        content:
-          "WeeWee embodies the Innovator/Creator archetype—defined by creativity, imagination, and a drive to improve the world through innovation. This aligns with WeeWee’s commitment to sustainability, intelligence, and excellence.",
-        order: 35,
-      },
-      {
-        type: "heading",
-        content: "Brand Application",
-        order: 36,
-      },
-      {
-        type: "paragraph",
-        content:
-          "WeeWee’s identity comes alive through real-world applications—mockups, digital experiences, and service simulations. These executions reflect both current services and forward-thinking ideas, reinforcing the brand’s innovative vision for logistics.",
-        order: 37,
-      },
-      {
-        type: "heading",
-        content: "Wrap-Up",
-        order: 38,
-      },
-      {
-        type: "paragraph",
-        content:
-          "This rebrand was more than a visual transformation—it redefined what a delivery service could represent. Through strategy, design, and storytelling, WeeWee evolved into a symbol of trust, innovation, and cultural pride, setting a new standard for meaningful logistics.",
-        order: 39,
-      },
-
-      /* ---------- Image Grid (Applications) ---------- */
       {
         type: "imageGrid",
         content: [
           {
-            url: "https://picsum.photos/seed/app-ui/1200/800",
+            url: "https://firebasestorage.googleapis.com/v0/b/portfolio-aymen-amokrane.firebasestorage.app/o/projects%2FFihnzZWr0dm9zzBDNNb8%2FArtboard%203.jpg?alt=media&token=1df21ee2-b6c7-4fbe-a7dc-2660bde6b851",
             alt: "Delivery app UI",
-            width: 1200,
-            height: 800,
-            displayRatio: "3:2",
+            width: 700,
+            height: 700,
+            displayRatio: "1:1",
           },
           {
-            url: "https://picsum.photos/seed/van/1200/800",
+            url: "https://firebasestorage.googleapis.com/v0/b/portfolio-aymen-amokrane.firebasestorage.app/o/projects%2FFihnzZWr0dm9zzBDNNb8%2FArtboard%204.jpg?alt=media&token=21c3bf63-3df0-4daa-befb-499d6a98d8f0",
             alt: "Fleet branding",
-            width: 1200,
-            height: 800,
-            displayRatio: "3:2",
+            width: 700,
+            height: 700,
+            displayRatio: "1:1",
           },
           {
-            url: "https://picsum.photos/seed/packaging/1200/800",
+            url: "https://firebasestorage.googleapis.com/v0/b/portfolio-aymen-amokrane.firebasestorage.app/o/projects%2FFihnzZWr0dm9zzBDNNb8%2FArtboard%202.jpg?alt=media&token=adff6a1e-afd2-4987-a98a-d9648e541ac9",
             alt: "Eco packaging",
-            width: 1200,
-            height: 800,
-            displayRatio: "3:2",
+            width: 700,
+            height: 700,
+            displayRatio: "1:1",
           },
         ],
-        order: 40,
+        order: 4,
         meta: {
           section: "brand_application",
           label: "Applications",
           columns: 3,
         },
       },
-
-      /* ---------- Single Image ---------- */
       {
-        type: "image",
-        content: [
-          {
-            url: "https://picsum.photos/seed/app-ui/1200/800",
-            alt: "Delivery app UI",
-            width: 1200,
-            height: 800,
-            displayRatio: "16:9",
-          },
-        ],
+        type: "paragraph",
+        content:
+          "WeeWee is a next-generation delivery service redefining logistics in Algeria through technology, efficiency, and a customer-first approach. More than just a courier company, WeeWee leverages smart logistics solutions to ensure faster, more reliable deliveries while fostering a sustainable future.",
+        order: 5,
+      },
+      {
+        type: "heading",
+        content: "Project Scope",
+        order: 6,
+        meta: { section: "project_scope" },
+      },
+      {
+        type: "list",
+        content: "Rebranding; Brand Strategy; Visual Identity & Logo Design",
+        order: 7,
+      },
+      {
+        type: "heading",
+        content: "Challenge",
+        order: 8,
+        meta: { section: "challenge" },
+      },
+      {
+        type: "paragraph",
+        content:
+          "WeeWee Delivery began as a basic logistics service focused on fast and affordable deliveries. However, as the company grew, it struggled to stand out in a highly competitive market. The original brand lacked innovation, emotional connection, and distinction, making it difficult to build trust and recognition. Its road-inspired logo symbolized movement but didn’t reflect technology, adaptability, or sustainability—the key pillars of WeeWee’s new vision.",
+        order: 9,
+      },
+      {
+        type: "heading",
+        content: "Outcome",
+        order: 10,
+        meta: { section: "outcome" },
+      },
+      {
+        type: "paragraph",
+        content:
+          "The rebrand transformed WeeWee into a tech-driven, customer-first logistics brand. The new mascot, the Maknin (European Finch), replaced the road-based logo—symbolizing speed, intelligence, and adaptability, while embedding sustainability into the brand’s long-term vision. The new identity shifts WeeWee from basic delivery to smart logistics, establishing a recognizable and emotionally engaging presence with both B2B and B2C audiences.",
+        order: 11,
+      },
+      {
+        type: "heading",
+        content: "Visual Exploration",
+        order: 12,
+        meta: { section: "visual_identity" },
+      },
+      {
+        type: "paragraph",
+        content:
+          "The move to a mascot-based identity emerged from the need to express innovation, intelligence, and technology. The Maknin (European Goldfinch), chosen for its symbolic relevance in Algeria, embodies speed, adaptability, and precision—essential for modern logistics. It connects the brand to local heritage while reinforcing its sustainable vision. This approach gives WeeWee warmth, personality, and trustworthiness, distinguishing it from typical logistics brands that rely on abstract symbols.",
+        order: 13,
+      },
+      {
+        type: "heading",
+        content: "Brand Strategy",
+        order: 14,
+        meta: { section: "strategy" },
+      },
+      {
+        type: "paragraph",
+        content:
+          "The rebranding focused on evolving WeeWee into a tech-driven logistics brand with an emotionally resonant identity. Through visual design, mascot creation, and redefined messaging, the new brand establishes a strong foundation for future innovation.",
+        order: 15,
+      },
+      {
+        type: "subheading",
+        content: "Benefits & Value",
+        order: 16,
+      },
+      {
+        type: "paragraph",
+        content:
+          "WeeWee delivers fast, reliable, and customer-centric logistics services that emphasize user-friendly experiences, sustainability, and trust. For e-commerce businesses, it provides international-standard logistics solutions, promoting growth and efficiency.",
+        order: 17,
+      },
+      {
+        type: "subheading",
+        content: "Brand Goals",
+        order: 18,
+      },
+      {
+        type: "paragraph",
+        content:
+          "WeeWee aims to lead Algeria’s tech-driven logistics industry, setting new standards in e-logistics and e-commerce. Its mission includes advancing customer rights, service excellence, and innovation to become the most trusted delivery provider in Algeria.",
+        order: 19,
+      },
+      {
+        type: "subheading",
+        content: "Target Audience",
+        order: 20,
+      },
+      {
+        type: "list",
+        content:
+          "Medical analyses centers; E-commerce businesses; Administrative facilities; General consumers (ages 18–65, primarily 18–35)",
+        order: 21,
+      },
+      {
+        type: "heading",
+        content: "Brand Mission",
+        order: 22,
+      },
+      {
+        type: "quote",
+        content: "Delivering Smarter, Moving Faster, Caring More.",
+        order: 23,
+      },
+      {
+        type: "paragraph",
+        content:
+          "WeeWee’s mission is to create an honest, trustworthy marketplace through exceptional delivery services that prioritize customer needs. By promoting transparency and reliability, the brand seeks to build long-term relationships grounded in mutual success.",
+        order: 24,
+      },
+      {
+        type: "heading",
+        content: "Brand Vision",
+        order: 25,
+      },
+      {
+        type: "quote",
+        content: "Delivery Done Differently.",
+        order: 26,
+      },
+      {
+        type: "paragraph",
+        content:
+          "WeeWee envisions transforming the logistics sector through innovation and sustainability. By leveraging technology for efficiency and eco-conscious practices, it aims to redefine reliability and excellence in delivery services.",
+        order: 27,
+      },
+      {
+        type: "heading",
+        content: "Brand Personality",
+        order: 28,
+      },
+      {
+        type: "paragraph",
+        content:
+          "WeeWee’s personality blends innovation, trust, and approachability. Every brand interaction—whether with customers or partners—reflects reliability, engagement, and a forward-thinking mindset.",
+        order: 29,
+      },
+      {
+        type: "heading",
+        content: "Brand Voice",
+        order: 30,
+      },
+      {
+        type: "paragraph",
+        content:
+          "The brand voice is friendly, approachable, and intelligently innovative. It conveys care and expertise, combining warmth with a commitment to technology and sustainability. This helps customers navigate logistics with confidence and ease.",
+        order: 31,
+      },
+      {
+        type: "heading",
+        content: "Brand Tone",
+        order: 32,
+      },
+      {
+        type: "paragraph",
+        content:
+          "WeeWee’s tone is engaging, informative, and trustworthy. It adapts to diverse audiences—consumers, business partners, or specialized clients—while maintaining clarity and customer focus.",
+        order: 33,
+      },
+      {
+        type: "heading",
+        content: "Brand Attributes",
+        order: 34,
+      },
+      {
+        type: "paragraph",
+        content:
+          "WeeWee’s attributes center on innovation, trust, and customer satisfaction. Its human-centered design and forward-thinking solutions ensure an efficient, seamless delivery experience.",
+        order: 35,
+      },
+      {
+        type: "heading",
+        content: "Brand Archetype",
+        order: 36,
+      },
+      {
+        type: "paragraph",
+        content:
+          "WeeWee embodies the Innovator/Creator archetype—defined by creativity, imagination, and a drive to improve the world through innovation. This aligns with WeeWee’s commitment to sustainability, intelligence, and excellence.",
+        order: 37,
+      },
+      {
+        type: "heading",
+        content: "Brand Application",
+        order: 38,
+      },
+      {
+        type: "paragraph",
+        content:
+          "WeeWee’s identity comes alive through real-world applications—mockups, digital experiences, and service simulations. These executions reflect both current services and forward-thinking ideas, reinforcing the brand’s innovative vision for logistics.",
+        order: 39,
+      },
+      {
+        type: "heading",
+        content: "Wrap-Up",
+        order: 40,
+      },
+      {
+        type: "paragraph",
+        content:
+          "This rebrand was more than a visual transformation—it redefined what a delivery service could represent. Through strategy, design, and storytelling, WeeWee evolved into a symbol of trust, innovation, and cultural pride, setting a new standard for meaningful logistics.",
         order: 41,
       },
 
-      {
-        type: "carousel",
-        content: [
-          {
-            url: "https://picsum.photos/seed/outcome-1/1600/900",
-            alt: "Smart logistics UI",
-            caption: "Smart, tech-forward experience",
-            width: 1600,
-            height: 900,
-            displayRatio: "16:9",
-          },
-          {
-            url: "https://picsum.photos/seed/outcome-2/1600/900",
-            alt: "Customer-first touchpoint",
-            caption: "Customer-first service model",
-            width: 1600,
-            height: 900,
-            displayRatio: "16:9",
-          },
-          {
-            url: "https://picsum.photos/seed/outcome-3/1600/900",
-            alt: "Sustainable delivery",
-            caption: "Sustainability woven into the brand",
-            width: 1600,
-            height: 900,
-            displayRatio: "16:9",
-          },
-        ],
-        order: 42,
-        meta: {
-          label: "Outcome Highlights",
-          mode: "auto",
-          intervalMs: 3200,
-          slideDurationMs: 500, // NEW
-          transition: "ease-in-out",
-          direction: "rtl", // NEW (auto slide right→left)
-          loop: true,
-          pauseOnHover: true,
-          showIndicators: true,
-          showArrows: false,
-          arrowSize: 22,
-          displayRatio: "16:9",
-        },
-      },
+      // {
+      //   type: "carousel",
+      //   content: [
+      //     {
+      //       url: "https://picsum.photos/seed/outcome-1/1600/900",
+      //       alt: "Smart logistics UI",
+      //       caption: "Smart, tech-forward experience",
+      //       width: 1600,
+      //       height: 900,
+      //       displayRatio: "16:9",
+      //     },
+      //     {
+      //       url: "https://picsum.photos/seed/outcome-2/1600/900",
+      //       alt: "Customer-first touchpoint",
+      //       caption: "Customer-first service model",
+      //       width: 1600,
+      //       height: 900,
+      //       displayRatio: "16:9",
+      //     },
+      //     {
+      //       url: "https://picsum.photos/seed/outcome-3/1600/900",
+      //       alt: "Sustainable delivery",
+      //       caption: "Sustainability woven into the brand",
+      //       width: 1600,
+      //       height: 900,
+      //       displayRatio: "16:9",
+      //     },
+      //   ],
+      //   order: 42,
+      //   meta: {
+      //     label: "Outcome Highlights",
+      //     mode: "auto",
+      //     intervalMs: 3200,
+      //     slideDurationMs: 500, // NEW
+      //     transition: "ease-in-out",
+      //     direction: "rtl", // NEW (auto slide right→left)
+      //     loop: true,
+      //     pauseOnHover: true,
+      //     showIndicators: true,
+      //     showArrows: false,
+      //     arrowSize: 22,
+      //     displayRatio: "16:9",
+      //   },
+      // },
 
-      {
-        type: "carousel",
-        content: [
-          {
-            url: "https://picsum.photos/seed/use-b2b/1600/900",
-            alt: "B2B pickup",
-            caption: "B2B Pickup",
-            width: 1600,
-            height: 900,
-            displayRatio: "16:9",
-          },
-          {
-            url: "https://picsum.photos/seed/use-b2c/1600/900",
-            alt: "B2C delivery",
-            caption: "B2C Home Delivery",
-            width: 1600,
-            height: 900,
-            displayRatio: "16:9",
-          },
-          {
-            url: "https://picsum.photos/seed/use-med/1600/900",
-            alt: "Medical deliveries",
-            caption: "Medical & Admin Logistics",
-            width: 1600,
-            height: 900,
-            displayRatio: "16:9",
-          },
-        ],
-        order: 43,
-        meta: {
-          label: "Use Cases",
-          mode: "clickAuto",
-          intervalMs: 3800,
-          slideDurationMs: 500, // NEW
-          transition: "ease",
-          direction: "rtl", // NEW (used when auto-advancing)
-          loop: true,
-          pauseOnHover: true,
-          showIndicators: true,
-          showArrows: true,
-          arrowSize: 22,
-          ratio: "16:9",
-        },
-      },
+      // {
+      //   type: "carousel",
+      //   content: [
+      //     {
+      //       url: "https://picsum.photos/seed/use-b2b/1600/900",
+      //       alt: "B2B pickup",
+      //       caption: "B2B Pickup",
+      //       width: 1600,
+      //       height: 900,
+      //       displayRatio: "16:9",
+      //     },
+      //     {
+      //       url: "https://picsum.photos/seed/use-b2c/1600/900",
+      //       alt: "B2C delivery",
+      //       caption: "B2C Home Delivery",
+      //       width: 1600,
+      //       height: 900,
+      //       displayRatio: "16:9",
+      //     },
+      //     {
+      //       url: "https://picsum.photos/seed/use-med/1600/900",
+      //       alt: "Medical deliveries",
+      //       caption: "Medical & Admin Logistics",
+      //       width: 1600,
+      //       height: 900,
+      //       displayRatio: "16:9",
+      //     },
+      //   ],
+      //   order: 43,
+      //   meta: {
+      //     label: "Use Cases",
+      //     mode: "clickAuto",
+      //     intervalMs: 3800,
+      //     slideDurationMs: 500, // NEW
+      //     transition: "ease",
+      //     direction: "rtl", // NEW (used when auto-advancing)
+      //     loop: true,
+      //     pauseOnHover: true,
+      //     showIndicators: true,
+      //     showArrows: true,
+      //     arrowSize: 22,
+      //     ratio: "16:9",
+      //   },
+      // },
     ],
 
     notesBlocksInfos: [
