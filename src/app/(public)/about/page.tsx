@@ -1,6 +1,7 @@
 import SectionTitle from "@/components/SectionTitle";
 import Placeholder from "@/components/public/common/Placeholder";
 import CountUp from "@/components/public/about/CountUp";
+import Image from "next/image";
 
 import { experiences, education, skills, tools, stats } from "@/data/about";
 import { ACHIEVEMENTS } from "@/lib/data/achievements";
@@ -18,13 +19,32 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen pt-[var(--nav-h)]">
       {/* Hero */}
-      <section className="relative h-[42vh] min-h-[300px] flex items-center justify-center">
-        <Placeholder className="absolute inset-0" />
-        <div className="relative z-10 text-center">
-          <div className="mx-auto h-28 w-28 rounded-full border-2 border-white overflow-hidden bg-white shadow">
-            <Placeholder className="h-full w-full" />
+      <section className="relative h-[42vh] min-h-[300px] flex items-center justify-center overflow-hidden">
+        {/* Background pattern */}
+        {/* <div
+          className="absolute inset-0 opacity-10 bg-repeat-x bg-center scale-105"
+          style={{
+            backgroundImage: "url('/images/common/profile-pattern.png')", // your pattern image
+            backgroundSize: "auto 100%", // full height, repeat horizontally
+          }}
+        /> */}
+
+        {/* Dark tint overlay */}
+        {/* <div className="absolute inset-0 bg-black/10 mix-blend-multiply" /> */}
+        <span className="absolute inset-0 magicpattern"/>
+
+        {/* Foreground content */}
+        <div className="relative z-10 text-black text-center">
+          <div className="mx-auto h-28 w-28 rounded-full border-2 border-white overflow-hidden bg-white shadow relative">
+            <Image
+              src="/images/common/profile.jpg"
+              alt="Profile picture"
+              fill
+              sizes="112px"
+              className="object-cover"
+            />
           </div>
-          <div className="mt-3 text-xl font-medium">Aymen Amokrane</div>
+          <div className="mt-3 text-xl  font-medium">Aymen Amokrane</div>
           <div className="text-sm opacity-80">
             Senior Brand Designer — Dubai
           </div>
