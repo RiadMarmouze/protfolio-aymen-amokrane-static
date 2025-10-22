@@ -1,5 +1,4 @@
 import SectionTitle from "@/components/SectionTitle";
-import Placeholder from "@/components/public/common/Placeholder";
 import CountUp from "@/components/public/about/CountUp";
 import Image from "next/image";
 
