@@ -10,40 +10,8 @@ import {
   PROJECT_TAGS,
   PriorityKey,
 } from "@/data/contact";
-
-// ----------------------
-// Types matching the API schema (client-side)
-// ----------------------
-type OfferKind = "collab" | "job";
-
-type OfferPayloadBase = {
-  kind: OfferKind;
-  name: string;
-  email: string;
-  projectName: string;
-  industry: string;
-  budget: string;
-  timeline: string;
-  country: string;
-  projectType: string;
-  brief: string;
-};
-
-type CollabPayload = OfferPayloadBase & {
-  kind: "collab";
-  priorityKey?: "cafe" | "esports" | "fintech" | "event" | "logistics";
-};
-
-type JobPayload = OfferPayloadBase & {
-  kind: "job";
-  priorityKey?: never;
-};
-
-type OfferPayload = CollabPayload | JobPayload;
-
-type ApiOk = { id: string; status: "ok" };
-type ApiErr = { error: string } | { error: string; issues?: unknown };
-
+import React from "react";
+import { cn } from "@/lib/utils/cn";
 // ----------------------
 // Styles
 // ----------------------
@@ -126,40 +94,123 @@ function CenteredSection({ children }: { children: React.ReactNode }) {
 // ----------------------
 // Priority UI
 // ----------------------
-function PillTab({
-  label,
-  keywords,
-  onClick,
-}: {
+interface PillTabProps {
   label: string;
-  keywords: string[];
-  onClick: () => void;
-}) {
+  subtitle?: string;
+  /** Parent-controlled: whether the dialog/pop-up is open */
+  isOpen?: boolean;
+  /** Called when user clicks BOOK NOW (parent should open the pop-up) */
+  onBookNow: () => void;
+  /** Optional price list shown when expanded */
+  items?: Array<[string, string ,string]>;
+}
+
+const cardBase = cn(
+  "relative rounded-xl h-fit border-2 border-black bg-white text-black",
+  "w-full text-left p-6 md:p-8"
+);
+
+const cornerBtn = cn(
+  "absolute right-4 top-4 inline-grid place-items-center",
+  "h-9 w-9 rounded-full border-2 border-black bg-white",
+  "text-lg leading-none select-none"
+);
+
+export function PillTab({
+  label,
+  subtitle = "FULL IDENTITY SYSTEMS",
+  isOpen = false, // parent popup state (for aria only)
+  onBookNow,
+  items = [
+    ["Full Brand Identity System", "$4,000","+"],
+    ["Brand Strategy", "$2,500","+"],
+    ["Visual Identity", "$2,000","+"],
+    ["Brand Naming", "$1,000",""],
+    ["Logo Only (Side Hustle)", "$1,000",""],
+    ["Identity Facelift", "$1,500","+"],
+  ],
+}: PillTabProps) {
+  // + expands details locally (inside the card)
+  const [expanded, setExpanded] = React.useState(false);
+  const panelId = `${label.replace(/\s+/g, "-").toLowerCase()}-panel`;
+
   return (
-    <button
-      type="button"
-      onClick={onClick}
-      className={`${PILL} text-center transition hover:bg-black hover:text-white w-64 h-24 flex flex-col items-center justify-center`}
-    >
-      <div className="text-lg font-semibold uppercase tracking-[0.12em]">
-        {label}
+    <article className={cardBase}>
+      {/* + / − expands details */}
+      <button
+        type="button"
+        aria-expanded={expanded}
+        aria-controls={panelId}
+        onClick={() => setExpanded((v) => !v)}
+        className={cornerBtn}
+      >
+        {expanded ? "−" : "+"}
+      </button>
+
+      {/* Header */}
+      <div className="pr-12">
+        <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight uppercase">
+          {label}
+        </h3>
+        <p className="mt-1 text-sm md:text-base text-neutral-600 tracking-wide uppercase">
+          {subtitle}
+        </p>
       </div>
-      <div className="mt-2 text-xs opacity-80 text-balance">
-        {keywords.join(" • ")}
+
+      {/* Expanded content */}
+      <div id={panelId} hidden={!expanded} className="mt-6">
+        <p className="leading-relaxed max-w-prose">
+          Choose what you need — from strategy to full identity systems.
+        </p>
+
+        <ul className="mt-3 border-t-2 border-black pt-3">
+          {items.map(([item, price, pluse]) => (
+            <li
+              key={item}
+              className="flex items-start justify-between py-2 text-sm md:text-base"
+            >
+              <span>{item}</span>
+              <span className="font-semibold tabular-nums">{price}{pluse}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* BOOK NOW requests parent to open the popup */}
+        <button
+          type="button"
+          aria-haspopup="dialog"
+          aria-expanded={isOpen}
+          onClick={onBookNow}
+          className={cn(
+            "mt-6 inline-flex items-center justify-center",
+            "rounded-md border-2 border-black bg-white px-5 py-3",
+            "text-base font-semibold tracking-wide"
+          )}
+        >
+          BOOK NOW ↗
+        </button>
       </div>
-    </button>
+
+      {/* Collapsed spacing (keeps layout like your reference) */}
+      {!expanded && <div className="mt-8 h-28" aria-hidden />}
+    </article>
   );
 }
 
 function PriorityTabs({ onOpen }: { onOpen: (k: PriorityKey) => void }) {
+  const [openKey, setOpenKey] = React.useState<PriorityKey | null>("event");
+
   return (
-    <div className="flex flex-wrap justify-center gap-4 w-full max-w-[980px] mx-auto">
+    <div className="grid grid-cols-1 gap-5 sm:grid-cols-2 xl:grid-cols-4">
       {PROPOSED_PROJECTS.map((p) => (
         <PillTab
           key={p.key}
           label={p.label}
-          keywords={PROJECT_TAGS[p.key]}
-          onClick={() => onOpen(p.key)}
+          isOpen={openKey === p.key}
+          onBookNow={() => {
+            setOpenKey((prev) => (prev === p.key ? null : p.key));
+            onOpen?.(p.key);
+          }}
         />
       ))}
     </div>
@@ -493,7 +544,6 @@ export default function ContactPage() {
     <main className="min-h-screen pt-[var(--nav-h)]">
       <CenteredSection>
         <SectionTitle>Priority Projects</SectionTitle>
-        
 
         <div className="flex justify-center">
           <PriorityTabs onOpen={setOpen} />
