@@ -55,7 +55,7 @@ export const Btn = React.forwardRef<HTMLButtonElement, BtnProps>(
     };
 
     const variants: Record<BtnVariant, string> = {
-      outline: "bg-white hover:bg-black hover:text-white",
+      outline: "border-white bg-white/30 hover:bg-white hover:text-black",
       solid: "bg-black text-white hover:opacity-90",
       ghost: "bg-transparent hover:bg-black/5",
     };

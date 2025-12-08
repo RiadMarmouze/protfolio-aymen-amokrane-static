@@ -145,11 +145,11 @@ export default function HeroSectionClient({ images }: { images: ImageItem[] }) {
 
       {/* Centered content (migrated to client): H1 + BigWordRotator + CTA */}
       <div className="w-full">
-        <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8 text-center text-white">
+        <div className="mx-auto max-w-screen-xl px-4 pt-16 sm:px-6 lg:px-8 text-center text-white">
           {/* H1 */}
           <h1
             className="
-              font-semibold tracking-tight leading-[0.92]
+              font-bold tracking-tight leading-[0.92]
               text-[clamp(2.5rem,8vw,5.5rem)]
               md:text-[clamp(3.5rem,7vw,7rem)]
             "
@@ -160,7 +160,7 @@ export default function HeroSectionClient({ images }: { images: ImageItem[] }) {
           {/* Rotator (controlled by `index`) */}
           <div
             className="
-              mt-1 font-semibold tracking-tight
+              mt-1 font-bold tracking-tight
               text-[clamp(2.2rem,7.8vw,5rem)]
               md:text-[clamp(3rem,6.8vw,6.5rem)]
             "
@@ -169,7 +169,7 @@ export default function HeroSectionClient({ images }: { images: ImageItem[] }) {
               words={words}
               activeIndex={index}
               className="
-                font-semibold tracking-tight
+                font-bold tracking-tight
                 text-[clamp(2.2rem,7.8vw,5rem)]
                 md:text-[clamp(3rem,6.8vw,6.5rem)]
               "
@@ -177,7 +177,7 @@ export default function HeroSectionClient({ images }: { images: ImageItem[] }) {
           </div>
 
           {/* CTA */}
-          <div className="mt-6 sm:mt-8">
+          <div className="mt-14 sm:mt-16">
             <Link
               href="/contact"
               aria-label="Contact — Available for work"
@@ -191,13 +191,14 @@ export default function HeroSectionClient({ images }: { images: ImageItem[] }) {
               <Btn
                 className="
                   group relative inline-flex items-center justify-center gap-3 sm:gap-4
-                  rounded-full border-2 border-black bg-white text-black
+                  rounded-full border-2 
                   px-5 py-3 sm:px-7 sm:py-3.5 lg:px-9 lg:py-4
                   text-xs sm:text-sm lg:text-base
                   uppercase tracking-[0.15em] sm:tracking-[0.2em]
-                  hover:bg-black hover:text-white transition-colors duration-300
+                 transition-colors duration-300
                   min-h-11 sm:min-h-12
                 "
+                variant="outline"
               >
                 <span className="relative flex items-center justify-center w-5 h-5 text-current">
                   <span
@@ -225,7 +226,7 @@ export default function HeroSectionClient({ images }: { images: ImageItem[] }) {
       </div>
 
       {/* Dots */}
-      <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
+      {/* <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
         {images.map((_, i) => (
           <button
             key={i}
@@ -240,7 +241,7 @@ export default function HeroSectionClient({ images }: { images: ImageItem[] }) {
             onClick={() => setIndex(i)}
           />
         ))}
-      </div>
+      </div> */}
 
       {/* SR-only announcement for current word */}
       <div className="sr-only" aria-live="polite">

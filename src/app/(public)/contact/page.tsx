@@ -12,6 +12,8 @@ import {
 } from "@/data/contact";
 import React from "react";
 import { cn } from "@/lib/utils/cn";
+import { ArrowUpRight } from "@/components/public/common/icons";
+import { motion } from "framer-motion";
 // ----------------------
 // Styles
 // ----------------------
@@ -102,18 +104,12 @@ interface PillTabProps {
   /** Called when user clicks BOOK NOW (parent should open the pop-up) */
   onBookNow: () => void;
   /** Optional price list shown when expanded */
-  items?: Array<[string, string ,string]>;
+  items?: Array<[string, string, string]>;
 }
 
 const cardBase = cn(
   "relative rounded-xl h-fit border-2 border-black bg-white text-black",
   "w-full text-left p-6 md:p-8"
-);
-
-const cornerBtn = cn(
-  "absolute right-4 top-4 inline-grid place-items-center",
-  "h-9 w-9 rounded-full border-2 border-black bg-white",
-  "text-lg leading-none select-none"
 );
 
 export function PillTab({
@@ -122,12 +118,12 @@ export function PillTab({
   isOpen = false, // parent popup state (for aria only)
   onBookNow,
   items = [
-    ["Full Brand Identity System", "$4,000","+"],
-    ["Brand Strategy", "$2,500","+"],
-    ["Visual Identity", "$2,000","+"],
-    ["Brand Naming", "$1,000",""],
-    ["Logo Only (Side Hustle)", "$1,000",""],
-    ["Identity Facelift", "$1,500","+"],
+    ["Full Brand Identity System", "$4,000", "+"],
+    ["Brand Strategy", "$2,500", "+"],
+    ["Visual Identity", "$2,000", "+"],
+    ["Brand Naming", "$1,000", ""],
+    ["Logo Only (Side Hustle)", "$1,000", ""],
+    ["Identity Facelift", "$1,500", "+"],
   ],
 }: PillTabProps) {
   // + expands details locally (inside the card)
@@ -136,15 +132,37 @@ export function PillTab({
 
   return (
     <article className={cardBase}>
-      {/* + / − expands details */}
       <button
         type="button"
         aria-expanded={expanded}
         aria-controls={panelId}
         onClick={() => setExpanded((v) => !v)}
-        className={cornerBtn}
+        aria-label={expanded ? "Collapse" : "Expand"}
+        className={`
+        absolute right-4 top-4 inline-grid place-items-center
+        h-9 w-9 rounded-full border-2 border-black bg-white text-black
+        leading-none select-none
+        focus:outline-none focus-visible:ring-2 focus-visible:ring-black focus-visible:ring-offset-2
+        transition-colors duration-150
+      `}
       >
-        {expanded ? "−" : "+"}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 20 20"
+          width="20"
+          height="20"
+          stroke="currentColor"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          shapeRendering="crispEdges"
+          vectorEffect="non-scaling-stroke"
+        >
+          {/* Horizontal stroke (always visible) */}
+          <line x1="4" y1="10" x2="16" y2="10" />
+          {/* Vertical stroke (visible only when collapsed) */}
+          {!expanded && <line x1="10" y1="4" x2="10" y2="16" />}
+        </svg>
       </button>
 
       {/* Header */}
@@ -170,7 +188,10 @@ export function PillTab({
               className="flex items-start justify-between py-2 text-sm md:text-base"
             >
               <span>{item}</span>
-              <span className="font-semibold tabular-nums">{price}{pluse}</span>
+              <span className="font-semibold tabular-nums">
+                {price}
+                {pluse}
+              </span>
             </li>
           ))}
         </ul>
@@ -182,12 +203,12 @@ export function PillTab({
           aria-expanded={isOpen}
           onClick={onBookNow}
           className={cn(
-            "mt-6 inline-flex items-center justify-center",
-            "rounded-md border-2 border-black bg-white px-5 py-3",
+            "mt-6 w-full px-5 py-3 gap-1 inline-flex items-center justify-center",
+            "rounded-md border-2 border-black bg-white hover:bg-black hover:text-white ",
             "text-base font-semibold tracking-wide"
           )}
         >
-          BOOK NOW ↗
+          <span>BOOK NOW</span> <ArrowUpRight />
         </button>
       </div>
 

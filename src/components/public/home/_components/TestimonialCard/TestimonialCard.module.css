@@ -1,0 +1,16 @@
+.userNameText{
+    @apply text-xs font-bold leading-tight lg:text-base;
+}
+
+.userRoleTexts{
+    @apply text-[8px] leading-tight lg:text-sm;
+}
+
+.testimonialBodyText{
+    @apply text-xs lg:text-xl;
+}
+
+
+.cardShadowDropDownEffect {
+    @apply border shadow-lg hover:border-gray-200 hover:shadow-inner-custom hover:shadow-black/50 border-black;
+}

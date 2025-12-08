@@ -76,3 +76,18 @@ export const stats = [
   { k: "Currently Active Projects", v: 3, suffix: "", sub: "April 2025" },
   { k: "Featured on WBDS", v: 4, suffix: "", sub: "Personal + client work" },
 ];
+
+
+
+export const stats_home = [
+  {
+    k: "Full Brand Identities",
+    v: 20,
+    suffix: "+",
+    sub: "End-to-end design systems",
+  },
+  { k: "Industries", v: 10, suffix: "+", sub: "Logistics / F&B / Tech" },
+  
+  { k: "Creative Direction", v: 12, suffix: "+", sub: "Post-branding support" },
+  
+];

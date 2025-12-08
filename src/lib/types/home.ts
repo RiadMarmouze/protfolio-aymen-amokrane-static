@@ -4,10 +4,15 @@ export type BrandLogo = {
   width: number; // intrinsic width for next/image
   height: number; // intrinsic height for next/image
 };
-export interface Achievement {
-  title: string;
-  subtitle?: string;
+
+export interface Testimonial {
+  id: number;
+  content: string;
+  imageUrl: string;
+  name: string;
+  role: string;
 }
+
 
 export type ImageItem = { src: string; alt: string; word?: string };
 

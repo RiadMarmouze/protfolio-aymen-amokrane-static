@@ -7,6 +7,7 @@ import SelectedClientsServer from "@/components/public/home/_sections/SelectedCl
 import PageIntroTransition from "@/components/public/home/PageIntroTransition";
 import { ReactNode, Suspense } from "react";
 import NumbersSectionServer from "@/components/public/home/_sections/NumbersSection/Numbers.server";
+import TestimonialSectionServer from "@/components/public/home/_sections/TestimonialSection/TestimonialSection.server";
 const INTRO_CONFIG = {
   bgColor: "#000",
   rectColor: "#fff",
@@ -82,13 +83,17 @@ export default function HomePage() {
         </Suspense>
 
         {/* CLIENTS (full-bleed marquee) */}
-        <Suspense fallback={<SectionSkeleton label="Selected clients" />}>
+        {/* <Suspense fallback={<SectionSkeleton label="Selected clients" />}>
           <SelectedClientsServer />
-        </Suspense>
+        </Suspense> */}
 
         {/* NUMBERS (full-bleed marquee) */}
         <Suspense fallback={<SectionSkeleton label="Selected clients" />}>
           <NumbersSectionServer />
+        </Suspense>
+
+        <Suspense fallback={<SectionSkeleton label="Testimonials" />}>
+          <TestimonialSectionServer />
         </Suspense>
       </main>
     </PageIntroTransition>
